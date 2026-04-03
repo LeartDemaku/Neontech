@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="none"/>
+  
+  <!-- Phone Body -->
+  <rect x="100" y="60" width="100" height="180" rx="12" fill="#2D2D2D" stroke="#00FFFF" stroke-width="3"/>
+  
+  <!-- Screen -->
+  <rect x="110" y="80" width="80" height="140" rx="4" fill="#1E1E1E" stroke="#FF00FF" stroke-width="2"/>
+  
+  <!-- Top Notch -->
+  <rect x="135" y="70" width="30" height="5" rx="2" fill="#1E1E1E" stroke="#8A2BE2" stroke-width="1"/>
+  
+  <!-- Home Button -->
+  <circle cx="150" cy="230" r="8" fill="none" stroke="#FF00FF" stroke-width="2"/>
+  
+  <!-- Screen Icons -->
+  <rect x="120" y="90" width="15" height="15" rx="3" fill="#8A2BE2"/>
+  <rect x="143" y="90" width="15" height="15" rx="3" fill="#00FFFF"/>
+  <rect x="166" y="90" width="15" height="15" rx="3" fill="#FF00FF"/>
+  
+  <rect x="120" y="115" width="15" height="15" rx="3" fill="#FF00FF"/>
+  <rect x="143" y="115" width="15" height="15" rx="3" fill="#8A2BE2"/>
+  <rect x="166" y="115" width="15" height="15" rx="3" fill="#00FFFF"/>
+  
+  <rect x="120" y="140" width="15" height="15" rx="3" fill="#00FFFF"/>
+  <rect x="143" y="140" width="15" height="15" rx="3" fill="#FF00FF"/>
+  <rect x="166" y="140" width="15" height="15" rx="3" fill="#8A2BE2"/>
+  
+  <!-- Bottom App Bar -->
+  <rect x="120" y="190" width="60" height="10" rx="3" fill="#8A2BE2"/>
+  
+  <!-- Side Buttons -->
+  <rect x="95" y="100" width="5" height="15" rx="2" fill="#FF00FF"/>
+  <rect x="95" y="125" width="5" height="20" rx="2" fill="#00FFFF"/>
+</svg> 

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | NEONTECH</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/product-cards.css">
+    <link rel="stylesheet" href="css/products-page.css">
+    <link rel="stylesheet" href="css/notifications.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span>NEON</span>TECH
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="#" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Banner -->
+    <section class="page-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h1>Our <span class="text-gradient">Products</span></h1>
+                <p>Discover our full collection of premium tech products</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <!-- Filters and Sort -->
+            <div class="products-controls">
+                <div class="filter-section">
+                    <h3>Filter By</h3>
+                    <div class="filter-groups">
+                        <div class="filter-group">
+                            <h4>Category</h4>
+                            <div class="filter-options">
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="all" checked>
+                                    <span>All Products</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="new">
+                                    <span>New Arrivals</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="best">
+                                    <span>Best Sellers</span>
+                                </label>
+                                <label class="filter-option">
+                                    <input type="checkbox" name="category" value="premium">
+                                    <span>Premium</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <div class="filter-options">
+                                <div class="price-range">
+                                    <input type="range" min="0" max="1500" value="1500" id="price-slider">
+                                    <div class="price-inputs">
+                                        <span>$0</span>
+                                        <span id="price-value">$1500</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary apply-filters">Apply Filters</button>
+                </div>
+                <div class="products-display">
+                    <div class="products-top-bar">
+                        <div class="results-count">
+                            <span>Showing <strong>6</strong> products</span>
+                        </div>
+                        <div class="sort-options">
+                            <label for="sort-select">Sort by:</label>
+                            <select id="sort-select">
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="newest">Newest</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="products-grid">
+                        <!-- Product cards will be dynamically loaded -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <span>NEON</span>TECH
+                        </a>
+                    </div>
+                    <p>Creating premium products that combine innovation, quality, and design.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Subscribe</h3>
+                    <p>Get exclusive offers and updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 NEONTECH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/scroll-effects.js"></script>
+    <script>
+        // Additional products page specific script
+        document.addEventListener('DOMContentLoaded', function() {
+            // Price range slider
+            const priceSlider = document.getElementById('price-slider');
+            const priceValue = document.getElementById('price-value');
+            
+            if (priceSlider && priceValue) {
+                priceSlider.addEventListener('input', function() {
+                    priceValue.textContent = `$${this.value}`;
+                });
+            }
+            
+            // Load all products
+            loadProducts();
+            
+            // Sort select functionality
+            const sortSelect = document.getElementById('sort-select');
+            if (sortSelect) {
+                sortSelect.addEventListener('change', function() {
+                    // In a real app, this would call a sorting function
+                    // For now, just reload products
+                    loadProducts();
+                });
+            }
+            
+            // Apply filters button
+            const applyFiltersBtn = document.querySelector('.apply-filters');
+            if (applyFiltersBtn) {
+                applyFiltersBtn.addEventListener('click', function() {
+                    // In a real app, this would gather all filter settings
+                    // and apply them to the products
+                    // For now, just reload products
+                    loadProducts();
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

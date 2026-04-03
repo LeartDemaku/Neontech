@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | NEONTECH</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/notifications.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .about-hero {
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -20%;
+            width: 40%;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 0, 255, 0.15) 0%, rgba(255, 0, 255, 0) 70%);
+            z-index: -1;
+        }
+
+        .about-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary), var(--color-tertiary));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--color-surface);
+            border: 3px solid var(--color-primary);
+            top: 25px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            right: -13px;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -13px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background: var(--color-surface);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-small);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .timeline-year {
+            color: var(--color-primary);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: 10px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: var(--grid-gap);
+            margin: 60px 0;
+        }
+
+        .team-member {
+            background-color: var(--color-surface);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .team-photo {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .team-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .team-member:hover .team-photo img {
+            transform: scale(1.05);
+        }
+
+        .team-info {
+            padding: var(--spacing-lg);
+            text-align: center;
+        }
+
+        .team-info h3 {
+            font-family: var(--font-heading);
+            margin-bottom: 5px;
+        }
+
+        .team-info .position {
+            color: var(--color-primary);
+            font-weight: var(--font-weight-medium);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: var(--color-surface-variant);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-3px);
+            background: var(--gradient-primary);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--grid-gap);
+            margin: 60px 0;
+        }
+
+        .value-card {
+            background-color: var(--color-surface);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-xl);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .value-card h3 {
+            font-family: var(--font-heading);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 18px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span>NEON</span>TECH
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="products.html" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1>About <span class="text-gradient">NEONTECH</span></h1>
+                <p>We are a team of innovators, designers, and tech enthusiasts committed to creating products that redefine the future of consumer technology. Since our founding in 2018, we've been pushing the boundaries of what's possible, combining cutting-edge technology with sleek design to deliver an unparalleled user experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mission Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="text-gradient">Mission</span></h2>
+                <p>What drives us every day</p>
+            </div>
+            <div class="about-content">
+                <p>At NEONTECH, our mission is to create technology that enhances lives through innovation, quality, and accessibility. We believe that great technology should be intuitive, reliable, and beautiful — delivering experiences that truly connect with users on a personal level.</p>
+                <p>We're committed to sustainable practices, ethical sourcing, and minimizing our environmental footprint, because we believe cutting-edge technology and responsible production should go hand in hand.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="text-gradient">Values</span></h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Innovation First</h3>
+                    <p>We never settle for the status quo. Our team is constantly exploring new ideas, technologies, and approaches to create products that break new ground.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Design Excellence</h3>
+                    <p>We believe that exceptional function should be matched by exceptional form. Our products don't just work better — they look, feel, and integrate better into users' lives.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Quality Without Compromise</h3>
+                    <p>We meticulously test and refine every product, using premium materials and precision engineering to ensure reliability and longevity.</p>
+                </div>
+                <div class="value-card">
+                    <h3>User-Centered Approach</h3>
+                    <p>Every decision we make starts with the user experience. We design products that feel intuitive and personal from the first interaction.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Sustainability</h3>
+                    <p>We're committed to reducing our environmental impact through responsible material sourcing, energy-efficient manufacturing, and recyclable packaging.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Inclusivity</h3>
+                    <p>We design for everyone. Our products are created to be accessible and beneficial to users from all walks of life, regardless of their technical proficiency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="text-gradient">Team</span></h2>
+                <p>The innovative minds behind NEONTECH</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="img/team/team1.jpg" alt="Sarah Chen - CEO" onerror="this.src='https://via.placeholder.com/300x300.png?text=Sarah+Chen'">
+                    </div>
+                    <div class="team-info">
+                        <h3>Sarah Chen</h3>
+                        <span class="position">CEO & Co-Founder</span>
+                        <p>A visionary leader with 15+ years in consumer tech, Sarah drives NEONTECH's mission and strategic direction.</p>
+                        <div class="social-icons">
+                            <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="img/team/team2.jpg" alt="David Park - CTO" onerror="this.src='https://via.placeholder.com/300x300.png?text=David+Park'">
+                    </div>
+                    <div class="team-info">
+                        <h3>David Park</h3>
+                        <span class="position">CTO & Co-Founder</span>
+                        <p>An engineering mastermind with a background in both hardware and software development, driving our technological innovation.</p>
+                        <div class="social-icons">
+                            <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="img/team/team3.jpg" alt="Maya Rodriguez - Design Director" onerror="this.src='https://via.placeholder.com/300x300.png?text=Maya+Rodriguez'">
+                    </div>
+                    <div class="team-info">
+                        <h3>Maya Rodriguez</h3>
+                        <span class="position">Design Director</span>
+                        <p>With an eye for both aesthetics and functionality, Maya ensures our products are as beautiful as they are intuitive.</p>
+                        <div class="social-icons">
+                            <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="img/team/team4.jpg" alt="James Kim - Product Manager" onerror="this.src='https://via.placeholder.com/300x300.png?text=James+Kim'">
+                    </div>
+                    <div class="team-info">
+                        <h3>James Kim</h3>
+                        <span class="position">Product Manager</span>
+                        <p>James transforms visionary ideas into reality, overseeing the product development lifecycle from concept to launch.</p>
+                        <div class="social-icons">
+                            <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our <span class="text-gradient">Story</span></h2>
+                <p>The evolution of NEONTECH</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2018</div>
+                        <h3>The Beginning</h3>
+                        <p>NEONTECH was founded in a small garage by Sarah Chen and David Park with a vision to create consumer electronics that combine cutting-edge technology with exceptional design.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2019</div>
+                        <h3>First Product Launch</h3>
+                        <p>We launched our first product, the NEON-1 Headphones, which quickly gained popularity for their superior sound quality and striking aesthetic.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020</div>
+                        <h3>Expansion & Growth</h3>
+                        <p>Despite global challenges, we expanded our team and moved to our first official headquarters, setting the stage for accelerated product development.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021</div>
+                        <h3>Product Line Diversification</h3>
+                        <p>We expanded beyond audio into wearable technology, releasing our first smartwatch to critical acclaim and market success.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022</div>
+                        <h3>International Reach</h3>
+                        <p>NEONTECH products became available in over 25 countries as we established strategic partnerships with global retailers and distributors.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <h3>Today & Beyond</h3>
+                        <p>With a growing team of 50+ passionate innovators, we continue to push boundaries with new product categories and technologies while staying true to our founding principles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join Us On This <span class="text-gradient">Journey</span></h2>
+                <p>Discover how our products can enhance your digital lifestyle and help you stay ahead of the curve.</p>
+                <a href="products.html" class="btn btn-large btn-primary">Explore Our Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <span>NEON</span>TECH
+                        </a>
+                    </div>
+                    <p>Creating premium products that combine innovation, quality, and design.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Subscribe</h3>
+                    <p>Get exclusive offers and updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 NEONTECH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/scroll-effects.js"></script>
+</body>
+</html> 

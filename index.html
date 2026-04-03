@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Name | Premium Products</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/product-cards.css">
+    <link rel="stylesheet" href="css/notifications.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span>NEON</span>TECH
+                </a>
+            </div>
+            <nav class="main-nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="products.html" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animated-title">
+                    <span class="text-gradient">Next-Gen</span>
+                    <span>Products for the Future</span>
+                </h1>
+                <p class="hero-desc">Discover our cutting-edge collection designed for those who demand excellence.</p>
+                <div class="hero-btns">
+                    <a href="products.html" class="btn btn-primary">Explore Collection</a>
+                    <a href="#featured" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    
+                </div>
+              
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured <span class="text-gradient">Products</span></h2>
+                <p>Browse our most popular items trusted by thousands</p>
+            </div>
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="new">New Arrivals</button>
+                <button class="filter-btn" data-filter="best">Best Sellers</button>
+                <button class="filter-btn" data-filter="premium">Premium</button>
+            </div>
+            <div class="products-grid">
+                <!-- Product cards will be dynamically loaded with JavaScript -->
+            </div>
+            <div class="view-all-container">
+                <a href="products.html" class="btn btn-secondary">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose <span class="text-gradient">Us</span></h2>
+                <p>The benefits that set our products apart</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="img/icons/quality.svg" alt="Premium Quality">
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>Crafted with exceptional materials and meticulous attention to detail.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="img/icons/innovation.svg" alt="Innovative Design">
+                    </div>
+                    <h3>Innovative Design</h3>
+                    <p>Cutting-edge technology meets sleek aesthetics in every product.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="img/icons/support.svg" alt="24/7 Support">
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our team is always available to help with any questions or concerns.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <img src="img/icons/shipping.svg" alt="Fast Shipping">
+                    </div>
+                    <h3>Fast Shipping</h3>
+                    <p>Quick and reliable delivery to your doorstep, wherever you are.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Customer <span class="text-gradient">Feedback</span></h2>
+                <p>What our clients say about our products</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"The quality and design exceeded all my expectations. Absolutely worth every penny!"</p>
+                    <div class="testimonial-author">
+                        <img src="img/testimonials/user1.jpg" alt="Sarah J.">
+                        <div class="author-info">
+                            <h4>Sarah J.</h4>
+                            <span>Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"Game-changing product! I've recommended it to everyone I know."</p>
+                    <div class="testimonial-author">
+                        <img src="img/testimonials/user2.jpg" alt="Michael T.">
+                        <div class="author-info">
+                            <h4>Michael T.</h4>
+                            <span>Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="rating">★★★★★</div>
+                    <p class="testimonial-text">"Customer service is outstanding and the product is even better."</p>
+                    <div class="testimonial-author">
+                        <img src="img/testimonials/user3.jpg" alt="Emma R.">
+                        <div class="author-info">
+                            <h4>Emma R.</h4>
+                            <span>Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-btn" aria-label="Previous testimonial">←</button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="next-btn" aria-label="Next testimonial">→</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to <span class="text-gradient">Transform</span> Your Experience?</h2>
+                <p>Join thousands of satisfied customers who've elevated their lifestyle with our products.</p>
+                <a href="products.html" class="btn btn-large btn-primary">Shop the Collection</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <span>NEON</span>TECH
+                        </a>
+                    </div>
+                    <p>Creating premium products that combine innovation, quality, and design.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="icon-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="icon-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="icon-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="icon-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Subscribe</h3>
+                    <p>Get exclusive offers and updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NEONTECH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/scroll-effects.js"></script>
+</body>
+</html> 
